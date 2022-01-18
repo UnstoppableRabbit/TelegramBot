@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "h+tgNWbNqhdfGJjHhMA5u2G+4aj/LBIg7GQMQvZgf+XgHvJOHJBsIZMe4arUUduAq2v1NqnFhBfpMKL/in9OdQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Minaev_G\\source\\repos\\telegrammBot\\telegrammBot\\telegrammBot.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Minaev_G\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\Minaev_G\\.nuget\\packages\\telegram.bot\\17.0.0\\telegram.bot.17.0.0.nupkg.sha512",
+    "C:\\Users\\Minaev_G\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.18\\microsoft.netcore.app.host.win-x64.3.1.18.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,16 @@
+C:\Users\Minaev_G\source\repos\telegrammBot\telegrammBot\bin\Debug\netcoreapp3.1\telegrammBot.exe
+C:\Users\Minaev_G\source\repos\telegrammBot\telegrammBot\bin\Debug\netcoreapp3.1\telegrammBot.deps.json
+C:\Users\Minaev_G\source\repos\telegrammBot\telegrammBot\bin\Debug\netcoreapp3.1\telegrammBot.runtimeconfig.json
+C:\Users\Minaev_G\source\repos\telegrammBot\telegrammBot\bin\Debug\netcoreapp3.1\telegrammBot.runtimeconfig.dev.json
+C:\Users\Minaev_G\source\repos\telegrammBot\telegrammBot\bin\Debug\netcoreapp3.1\telegrammBot.dll
+C:\Users\Minaev_G\source\repos\telegrammBot\telegrammBot\bin\Debug\netcoreapp3.1\telegrammBot.pdb
+C:\Users\Minaev_G\source\repos\telegrammBot\telegrammBot\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Minaev_G\source\repos\telegrammBot\telegrammBot\obj\Debug\netcoreapp3.1\telegrammBot.csproj.AssemblyReference.cache
+C:\Users\Minaev_G\source\repos\telegrammBot\telegrammBot\obj\Debug\netcoreapp3.1\telegrammBot.AssemblyInfoInputs.cache
+C:\Users\Minaev_G\source\repos\telegrammBot\telegrammBot\obj\Debug\netcoreapp3.1\telegrammBot.AssemblyInfo.cs
+C:\Users\Minaev_G\source\repos\telegrammBot\telegrammBot\obj\Debug\netcoreapp3.1\telegrammBot.csproj.CoreCompileInputs.cache
+C:\Users\Minaev_G\source\repos\telegrammBot\telegrammBot\obj\Debug\netcoreapp3.1\telegrammBot.csproj.CopyComplete
+C:\Users\Minaev_G\source\repos\telegrammBot\telegrammBot\obj\Debug\netcoreapp3.1\telegrammBot.dll
+C:\Users\Minaev_G\source\repos\telegrammBot\telegrammBot\obj\Debug\netcoreapp3.1\telegrammBot.pdb
+C:\Users\Minaev_G\source\repos\telegrammBot\telegrammBot\obj\Debug\netcoreapp3.1\telegrammBot.genruntimeconfig.cache
+C:\Users\Minaev_G\source\repos\telegrammBot\telegrammBot\bin\Debug\netcoreapp3.1\Telegram.Bot.dll
