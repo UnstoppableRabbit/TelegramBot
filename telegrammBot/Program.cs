@@ -3,10 +3,7 @@ using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using Telegram.Bot;
-using Telegram.Bot.Types.InputFiles;
-using Telegram.Bot.Types.ReplyMarkups;
 using telegrammBot.Data;
-using telegrammBot.WeatherAccess;
 
 namespace telegrammBot
 {
@@ -55,9 +52,19 @@ namespace telegrammBot
                             {
                                 await BotResponses.GetWeatherLocation(Bot, message);
                             }
+
+                            else if (message.Text.ToLower().StartsWith("/phonk"))
+                            {
+                                await BotResponses.GetPhonkPhoto(Bot, message);
+                            }
+
+                            else if (message.Text.ToLower().StartsWith("пасхалка"))
+                            {
+                                await BotResponses.SendCriminalInfo(Bot, message);
+                            }
                         }
 
-                        else if (message.Type == Telegram.Bot.Types.Enums.MessageType.Location)
+                        else if (message?.Type == Telegram.Bot.Types.Enums.MessageType.Location)
                         {
                             await BotResponses.SendWeatherLocation(Bot, message);
                         }
