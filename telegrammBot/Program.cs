@@ -62,11 +62,17 @@ namespace telegrammBot
                             {
                                 await BotResponses.SendCriminalInfo(Bot, message);
                             }
+
                         }
 
                         else if (message?.Type == Telegram.Bot.Types.Enums.MessageType.Location)
                         {
                             await BotResponses.SendWeatherLocation(Bot, message);
+                        }
+
+                        else if (message?.Type == Telegram.Bot.Types.Enums.MessageType.Photo)
+                        {
+                            await BotResponses.SendInfoByPhoto(Bot, message);
                         }
                         offset = update.Id + 1;
                     }
