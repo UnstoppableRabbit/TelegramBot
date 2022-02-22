@@ -12,11 +12,6 @@ namespace telegrammBot.PhotoConfig
 {
     public class CascadeFaceDetector : DisposableObject
     {
-        public CascadeFaceDetector()
-        {
-            Init().Wait();
-        }
-
         private static CascadeClassifier _faceCascadeClassifier = null;
 
         /// <summary>

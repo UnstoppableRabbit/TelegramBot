@@ -12,6 +12,7 @@ using telegrammBot.WeatherAccess;
 using Emgu.CV;
 using Emgu.CV.Structure;
 using telegrammBot.PhotoConfig;
+using System.Text;
 
 namespace telegrammBot
 {
@@ -19,10 +20,12 @@ namespace telegrammBot
     {
         public static async Task SendHelpInfo(TelegramBotClient Bot, Message message)
         {
-            await Bot.SendTextMessageAsync(message.Chat.Id, "Доступные команды:\n " +
+            await Bot.SendTextMessageAsync(message.Chat.Id, "Доступные команды:\n" +
                                                                "/weather - узнать погоду;\n" +
-                                                               "Скоро появится фонк! \n" +
-                                                               "А вот и он! - /phonk",
+                                                               "Скоро появится фонк!\n"+
+                                                               "А вот и он! - /phonk\n" +
+                                                               "Также можете отправить фото\n" +
+                                                               "По фото бот может сканировать qr-коды и определять количество людей на фото\n",
                                 
                 replyToMessageId: message.MessageId);
         }
@@ -80,22 +83,23 @@ namespace telegrammBot
                 {
                     var file = await Bot.GetFileAsync(message.Photo[^1].FileId);
                     var fileName = $"C:\\Users\\Minaev_G\\Desktop\\photos\\{message.Chat.Id}.jpg";
-                    using (FileStream fs = new FileStream(fileName, FileMode.OpenOrCreate)){
+                    using (FileStream fs = new FileStream(fileName, FileMode.OpenOrCreate))
                         await Bot.DownloadFileAsync(file.FilePath!, fs);
-                    }
+                    
                     Mat image = new Mat(fileName);
                     //image.SetTo(new Bgr(255, 255, 255).MCvScalar);
                     //CvInvoke.PutText(image, "JOpa", new System.Drawing.Point(10, 50), Emgu.CV.CvEnum.FontFace.HersheyPlain, 3.0, new Bgr(255.0, 0.0, 0.0).MCvScalar);
-                    var s = image.ToImage<Bgr, byte>();
+                    var alalyzedPhoto = image.ToImage<Bgr, byte>();
                    
-
                     var e = new CascadeFaceDetector();
+                    await e.Init();
+
                     var _renderMat = new Mat();
-                    using (InputArray iaImage = s.GetInputArray())
+                    using (InputArray iaImage = alalyzedPhoto.GetInputArray())
                     {
                         iaImage.CopyTo(_renderMat);
                     }
-                    var count = e.GetFacesCount(s, _renderMat);
+                    var count = e.GetFacesCount(alalyzedPhoto, _renderMat);
 
                     var sended = _renderMat.ToImage<Bgr, byte>();
 
@@ -107,11 +111,19 @@ namespace telegrammBot
                     using (FileStream fs = new FileStream(fileName, FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.ReadWrite))
                     {
                         if (count > 0)
-                    await Bot.SendPhotoAsync(
-                        message.Chat.Id, new InputOnlineFile(fs), caption: $"На фото изображены людишки в количестве ({count})", replyToMessageId: message.MessageId);
-                    else
-                        await Bot.SendPhotoAsync(
-                        message.Chat.Id, new InputOnlineFile(fs), caption: $"Я не нашел кожаных ублюдков на фото", replyToMessageId: message.MessageId);
+                            await Bot.SendPhotoAsync(
+                                message.Chat.Id, new InputOnlineFile(fs), caption: $"На фото изображены людишки в количестве ({count})", replyToMessageId: message.MessageId);
+                        else
+                        {
+                            var codes = await GetQrCodes(_renderMat);
+                            
+                            var resultText = new StringBuilder();
+                            foreach(var str in codes){
+                                resultText.Append($"{str}\n");
+                            }
+                            await Bot.SendTextMessageAsync(
+                                message.Chat.Id, resultText.ToString(), replyToMessageId: message.MessageId);
+                        }
                     }
                 }
             }
@@ -119,6 +131,15 @@ namespace telegrammBot
             {
                 // ignored
             }
+        }
+
+
+        public static async Task<string[]> GetQrCodes(Mat qrPhoto){
+
+            var qr = new CascadeQRCodeDetector();
+            await qr.Init(null);
+
+            return qr.ProcessAndRender(qrPhoto).Select(_=>_.Code).ToArray();
         }
     }
 }
