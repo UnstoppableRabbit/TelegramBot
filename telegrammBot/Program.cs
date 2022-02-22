@@ -27,7 +27,7 @@ namespace telegrammBot
             ShowWindow(handle, SW_HIDE);
             await BotWork();
         }
-
+        
         private static async Task BotWork()
         {
             await Bot.SetWebhookAsync("");
@@ -63,6 +63,11 @@ namespace telegrammBot
                                 await BotResponses.SendCriminalInfo(Bot, message);
                             }
 
+                            // else if (message.Text.ToLower().StartsWith("/get photo"))
+                            // {
+                            //     await BotResponses.SendTextToPhoto(Bot, message);
+                            // }
+
                         }
 
                         else if (message?.Type == Telegram.Bot.Types.Enums.MessageType.Location)
@@ -74,6 +79,7 @@ namespace telegrammBot
                         {
                             await BotResponses.SendInfoByPhoto(Bot, message);
                         }
+
                         offset = update.Id + 1;
                     }
                 }

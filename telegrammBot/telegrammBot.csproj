@@ -6,9 +6,383 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Emgu.CV" Version="4.5.5.4823" />
+    <PackageReference Include="Emgu.CV.runtime.windows" Version="4.5.5.4823" />
+    <PackageReference Include="NETStandard.Library" Version="2.0.3" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="PexelsNet" Version="3.1.0" />
     <PackageReference Include="Telegram.Bot" Version="17.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\vcruntime140_1.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\vcruntime140.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_xphoto440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_xobjdetect440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_ximgproc440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_xfeatures2d440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_viz440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_videostab440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_videoio_ffmpeg440_64.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_videoio440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_video440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_tracking440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_text440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_surface_matching440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_superres440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_stitching440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_stereo440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_shape440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_saliency440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_rapid440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_quality440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_plot440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_photo440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_phase_unwrapping440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_optflow440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_objdetect440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_ml440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_intensity_transform440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_img_hash440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_imgproc440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_imgcodecs440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_highgui440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_hfs440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_fuzzy440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_freetype440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_flann440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_features2d440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_face440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_dpm440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_dnn_superres440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_dnn_objdetect440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_dnn440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_datasets440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_cudev440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_cudawarping440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_cudastereo440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_cudaoptflow440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_cudaobjdetect440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_cudalegacy440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_cudaimgproc440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_cudafilters440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_cudafeatures2d440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_cudacodec440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_cudabgsegm440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_cudaarithm440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_core440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_calib3d440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_bioinspired440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_bgsegm440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_aruco440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\opencv_alphamat440.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\msvcp140_codecvt_ids.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\msvcp140_2.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\msvcp140_1.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\msvcp140.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\harfbuzz.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\freetype.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\cvextern.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.cv.runtime.windows.cuda\4.4.0.4099\build\x64\concrt140.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.runtime.windows.cuda.blas\11.1.218\build\x64\cublasLt64_11.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.runtime.windows.cuda.blas\11.1.218\build\x64\cublas64_11.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.runtime.windows.cuda.dnn.cnn\8.0.1\build\x64\cudnn_cnn_train64_8.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.runtime.windows.cuda.dnn.cnn\8.0.1\build\x64\cudnn_cnn_infer64_8.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.runtime.windows.cuda.dnn.ops\8.0.1\build\x64\cudnn_ops_train64_8.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.runtime.windows.cuda.dnn.ops\8.0.1\build\x64\cudnn_ops_infer64_8.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.runtime.windows.cuda.dnn\8.0.1\build\x64\cudnn64_8.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.runtime.windows.cuda.fft\11.1.218\build\x64\cufftw64_10.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.runtime.windows.cuda.fft\11.1.218\build\x64\cufft64_10.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.runtime.windows.cuda.npp\11.1.218\build\x64\npps64_11.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.runtime.windows.cuda.npp\11.1.218\build\x64\nppitc64_11.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.runtime.windows.cuda.npp\11.1.218\build\x64\nppisu64_11.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.runtime.windows.cuda.npp\11.1.218\build\x64\nppist64_11.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.runtime.windows.cuda.npp\11.1.218\build\x64\nppim64_11.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.runtime.windows.cuda.npp\11.1.218\build\x64\nppig64_11.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.runtime.windows.cuda.npp\11.1.218\build\x64\nppif64_11.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.runtime.windows.cuda.npp\11.1.218\build\x64\nppidei64_11.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.runtime.windows.cuda.npp\11.1.218\build\x64\nppicc64_11.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.runtime.windows.cuda.npp\11.1.218\build\x64\nppial64_11.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Minaev_G\.nuget\packages\emgu.runtime.windows.cuda.npp\11.1.218\build\x64\nppc64_11.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Emgu.CV.Models">
+      <HintPath>Libs\Emgu.CV.Models.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.Platform.NetCore">
+      <HintPath>Libs\Emgu.CV.Platform.NetCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.Platform.NetFramework">
+      <HintPath>Libs\Emgu.CV.Platform.NetFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.Platform.NetStandard">
+      <HintPath>Libs\Emgu.CV.Platform.NetStandard.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

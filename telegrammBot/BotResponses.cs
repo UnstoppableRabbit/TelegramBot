@@ -10,8 +10,8 @@ using Telegram.Bot.Types.ReplyMarkups;
 using telegrammBot.Data;
 using telegrammBot.WeatherAccess;
 using Emgu.CV;
-using Emgu.CV.CvEnum;
 using Emgu.CV.Structure;
+using telegrammBot.PhotoConfig;
 
 namespace telegrammBot
 {
@@ -74,11 +74,51 @@ namespace telegrammBot
 
         public static async Task SendInfoByPhoto(TelegramBotClient Bot, Message message)
         {
-            Image<Bgr, Byte> My_Image = new Image<Bgr, byte>(message.Document.FileId);
-            var data = My_Image.ToJpegData();
-            using(FileStream fs = new FileStream("C:/Users/Minaev_G/Desktop/some.jpg", FileMode.Create)){
-                await fs.WriteAsync(data);
-            } 
+            try
+            {
+                if (message.Photo != null)
+                {
+                    var file = await Bot.GetFileAsync(message.Photo[^1].FileId);
+                    var fileName = $"C:\\Users\\Minaev_G\\Desktop\\photos\\{message.Chat.Id}.jpg";
+                    using (FileStream fs = new FileStream(fileName, FileMode.OpenOrCreate)){
+                        await Bot.DownloadFileAsync(file.FilePath!, fs);
+                    }
+                    Mat image = new Mat(fileName);
+                    //image.SetTo(new Bgr(255, 255, 255).MCvScalar);
+                    //CvInvoke.PutText(image, "JOpa", new System.Drawing.Point(10, 50), Emgu.CV.CvEnum.FontFace.HersheyPlain, 3.0, new Bgr(255.0, 0.0, 0.0).MCvScalar);
+                    var s = image.ToImage<Bgr, byte>();
+                   
+
+                    var e = new CascadeFaceDetector();
+                    var _renderMat = new Mat();
+                    using (InputArray iaImage = s.GetInputArray())
+                    {
+                        iaImage.CopyTo(_renderMat);
+                    }
+                    var count = e.GetFacesCount(s, _renderMat);
+
+                    var sended = _renderMat.ToImage<Bgr, byte>();
+
+                    using (FileStream fs = new FileStream(fileName, FileMode.OpenOrCreate))
+                    {
+                        await fs.WriteAsync(sended.ToJpegData());
+                    }
+
+                    using (FileStream fs = new FileStream(fileName, FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.ReadWrite))
+                    {
+                        if (count > 0)
+                    await Bot.SendPhotoAsync(
+                        message.Chat.Id, new InputOnlineFile(fs), caption: $"На фото изображены людишки в количестве ({count})", replyToMessageId: message.MessageId);
+                    else
+                        await Bot.SendPhotoAsync(
+                        message.Chat.Id, new InputOnlineFile(fs), caption: $"Я не нашел кожаных ублюдков на фото", replyToMessageId: message.MessageId);
+                    }
+                }
+            }
+            catch 
+            {
+                // ignored
+            }
         }
     }
 }
