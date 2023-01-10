@@ -1,35 +1,34 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Minaev_G\\source\\repos\\telegrammBot\\telegrammBot\\telegrammBot.csproj": {}
+    "C:\\Users\\Minaev_g\\Desktop\\bot\\TelegramBot\\telegrammBot\\telegrammBot.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Minaev_G\\source\\repos\\telegrammBot\\telegrammBot\\telegrammBot.csproj": {
+    "C:\\Users\\Minaev_g\\Desktop\\bot\\TelegramBot\\telegrammBot\\telegrammBot.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Minaev_G\\source\\repos\\telegrammBot\\telegrammBot\\telegrammBot.csproj",
+        "projectUniqueName": "C:\\Users\\Minaev_g\\Desktop\\bot\\TelegramBot\\telegrammBot\\telegrammBot.csproj",
         "projectName": "telegrammBot",
-        "projectPath": "C:\\Users\\Minaev_G\\source\\repos\\telegrammBot\\telegrammBot\\telegrammBot.csproj",
-        "packagesPath": "C:\\Users\\Minaev_G\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Minaev_G\\source\\repos\\telegrammBot\\telegrammBot\\obj\\",
+        "projectPath": "C:\\Users\\Minaev_g\\Desktop\\bot\\TelegramBot\\telegrammBot\\telegrammBot.csproj",
+        "packagesPath": "C:\\Users\\Minaev_g\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Minaev_g\\Desktop\\bot\\TelegramBot\\telegrammBot\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Minaev_G\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Minaev_g\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "\\\\tikhomirov_i\\Exchange\\INTERNALNUGET": {},
           "https://api.nuget.org/v3/index.json": {},
-          "https://tfs/tfs/%D0%9A%D0%BE%D0%BD%D1%82%D1%83%D1%80-%D0%9D%D0%98%D0%98%D0%A0%D0%A1/_packaging/Kontur-Niirs/nuget/v3/index.json": {}
+          "https://pkgs.dev.azure.com/paragraph/_packaging/PARAGRAPH-PRIMARY-FEED/nuget/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
@@ -78,16 +77,35 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[3.1.32, 3.1.32]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

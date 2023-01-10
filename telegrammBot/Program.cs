@@ -25,9 +25,13 @@ namespace telegrammBot
             Bot = new Telegram.Bot.TelegramBotClient(BotData.BotKey);
             var handle = GetConsoleWindow(); //скрываем окно
             ShowWindow(handle, SW_HIDE);
+            await SendShit();
             await BotWork();
         }
-        
+        private static async Task SendShit()
+        {
+            await Bot.SendTextMessageAsync(932350508, "тест текст");
+        }
         private static async Task BotWork()
         {
             await Bot.SetWebhookAsync("");

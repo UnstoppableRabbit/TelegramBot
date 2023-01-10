@@ -82,7 +82,7 @@ namespace telegrammBot
                 if (message.Photo != null)
                 {
                     var file = await Bot.GetFileAsync(message.Photo[^1].FileId);
-                    var fileName = $"C:\\Users\\Minaev_G\\Desktop\\photos\\{message.Chat.Id}.jpg";
+                    var fileName = $"C:\\Users\\Minaev_g\\Desktop\\bot\\photo\\{message.Chat.Id}.jpg";
                     using (FileStream fs = new FileStream(fileName, FileMode.OpenOrCreate))
                         await Bot.DownloadFileAsync(file.FilePath!, fs);
                     
@@ -121,8 +121,12 @@ namespace telegrammBot
                             foreach(var str in codes){
                                 resultText.Append($"{str}\n");
                             }
-                            await Bot.SendTextMessageAsync(
-                                message.Chat.Id, resultText.ToString(), replyToMessageId: message.MessageId);
+                            if (codes.Count() > 0)
+                                await Bot.SendTextMessageAsync(
+                                    message.Chat.Id, resultText.ToString(), replyToMessageId: message.MessageId);
+                            else
+                                await Bot.SendTextMessageAsync(
+                                    message.Chat.Id, "На фото изображена какая-то хуйня", replyToMessageId: message.MessageId);
                         }
                     }
                 }
